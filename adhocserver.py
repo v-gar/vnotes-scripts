@@ -41,8 +41,8 @@ def main():
     port = int(sys.argv[4]) if len(sys.argv) == 5 else 4443
     credentials = '{0}:{1}'.format(username, password)
     key = base64.b64encode(bytes(credentials, 'utf-8'))
-    CERTFILE = certdir + 'cert.pem'
-    KEYFILE = certdir + 'key.pem'
+    CERTFILE = certdir + '/cert.pem'
+    KEYFILE = certdir + '/key.pem'
     
     httpd = HTTPServer(('localhost', port), MyHandler)
 
